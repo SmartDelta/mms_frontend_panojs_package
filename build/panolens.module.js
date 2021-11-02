@@ -5045,7 +5045,7 @@ VideoPanorama.prototype = Object.assign( Object.create( Panorama.prototype ), {
 
         const video = this.videoElement;
 
-        if ( video && !Number.isNaN( percentage ) && percentage !== 1 ) {
+        if ( video && !Number.isNaN( percentage ) && percentage !== 1 && video.duration !== Infinity ) {
 
             video.currentTime = video.duration * percentage;
 
